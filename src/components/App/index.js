@@ -16,6 +16,8 @@ class App extends Component{
         }
         //Змінюємо контекст this для методу nextUser 
         this.nextUser = this.nextUser.bind(this);
+        
+        console.log("Constructor");
     }
     //Описуємо метод відображення компонента
     //за допомогою інструкції render
@@ -31,6 +33,17 @@ class App extends Component{
     //         </Showdata>
     //     )
     // }
+    componentDidMount(){
+        console.log("componentDidMount");
+    }
+    shouldComponentUpdate(){
+        console.log("shouldComponentUpdate");
+        return true;
+    }
+
+    componentWillUnmount(){
+        console.log("componentWillUnmount")
+    }
     nextUser(){
         //Так не правильно
         // this.state.name = "Oleh";
