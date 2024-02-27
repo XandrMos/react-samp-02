@@ -65,6 +65,7 @@ class App extends Component{
     }
 
     render(){
+        console.log("render");
         return (
             <Showdata name={this.state.name} 
                       age={this.state.age}>
